@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header
+      class="flex shadow-md bg-amber-200 md:tracking-wide md:min-h-[70px] md:z-50"
+    >
+      <!--SunRise Name-->
+      <div
+        class="basis-1/2 md:basis-1/4 flex flex-nowrap items-center md:justify-between w-full"
+      >
+        <div class="basis-1/2 md:basis-1/4 md:self-center">
+          <a href="Index.html">
+            <h3
+              class="font-bold text-green-400 antialiased text-center text-2xl md:text-7xl"
+            >
+              SunRise
+            </h3>
+          </a>
+        </div>
+      </div>
+
+      <!--Below 768px Open Main Menu-->
+      <div
+        id="openmenu"
+        class="basis-1/2 flex justify-end items-center mr-6 md:hidden z-10"
+      >
+        <button>
+          <svg
+            class="w-6 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!--Below 768px Side Nav Bar-->
+      <div class="md:hidden" role="dialog" aria-modal="true">
+        <!-- <div class="fixed inset-0 z-10"></div> -->
+        <div
+          id="sidemenu"
+          class="fixed inset-y-0 right-0 z-50 transition-all duration-500 overflow-y-auto bg-amber-200 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          style="width: 0"
+        >
+          <div id="closemenu" class="flex items-center justify-end">
+            <button type="button" class="-m-1.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="Index.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >Home</a
+                >
+                <a
+                  href="./Views/About.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >About</a
+                >
+                <a
+                  href="./Views/Contact.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >Contact</a
+                >
+                <a
+                  href="./Views/TeamPage.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >Team</a
+                >
+              </div>
+              <div class="py-6 text-center">
+                <a
+                  href="./Views/Login.html"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 font-semibold leading-7 text-gray-900 hover:bg-gray-50 bg-gradient-to-br from-green-400 via-green-100 to-green-200"
+                  >Log in</a
+                >
+              </div>
+
+              <div class="py-6 text-center">
+                <a
+                  href="./Views/BookingPage.html"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 bg-gradient-to-br from-green-400 via-green-100 to-green-200"
+                  >Book A Session</a
+                >
+              </div>
+
+              <img
+                class="relative mx-auto my-6"
+                src="./images/SunRise.png"
+                height="180px"
+                width="180px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--Above 768px Header Menu -->
+        <div
+          class="hidden md:flex basis-2/4 flex-wrap justify-center items-center gap-5 cursor-pointer text-green-400 font-medium text-xl"
+        >
+          <a class="hover:underline hover:font-bold" href="Index.html">Home</a>
+          <a class="hover:underline hover:font-bold" href="./Views/About.html"
+            >About</a
+          >
+          <a class="hover:underline hover:font-bold" href="./Views/Contact.html"
+            >Contact</a
+          >
+          <a
+            class="hover:underline hover:font-bold"
+            href="./Views/TeamPage.html"
+            >Team</a
+          >
+        </div>
+
+        <!--Above 768pxLogin Button in Header Menu-->
+        <div
+          class="md:basis-1/4 cursor-pointer text-green-400 md:font-medium md:text-xl hidden md:flex md:justify-center items-center md:hover:font-extrabold"
+        >
+          <a href="./Views/Login.html">Login</a>
+          <svg
+            class="h-8 w-8 text-green-400"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" />
+            <path
+              d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+            />
+            <path d="M20 12h-13l3 -3m0 6l-3 -3" />
+          </svg>
+        </div>
+      </div>
+
+      <!--Above 768px Header Menu -->
+      <div
+        class="hidden md:flex basis-2/4 flex-wrap justify-center items-center md:gap-5 cursor-pointer text-green-400 font-medium text-xl"
+      >
+        <a class="hover:underline hover:font-bold" href="Index.html">Home</a>
+        <a class="hover:underline hover:font-bold" href="./Views/About.html"
+          >About</a
+        >
+        <a class="hover:underline hover:font-bold" href="./Views/Contact.html"
+          >Contact</a
+        >
+        <a class="hover:underline hover:font-bold" href="./Views/TeamPage.html"
+          >Team</a
+        >
+      </div>
+
+      <!--Above 768pxLogin Button in Header Menu-->
+
+      <div
+        class="md:basis-1/4 cursor-pointer text-green-400 md:font-medium md:text-xl hidden md:flex md:justify-center items-center md:hover:font-extrabold"
+      >
+        <a class="z-50" href="./Views/Login.html">Login</a>
+        <svg
+          class="h-8 w-8 text-green-400"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <path
+            d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+          />
+          <path d="M20 12h-13l3 -3m0 6l-3 -3" />
+        </svg>
+      </div>
+    </header>
+    <div class="bg-green-400 w-full h-4">&nbsp;</div>
+
+    <div id="page-body" class="bg-amber-100">
+      <div class="flex flex-col flex-wrap h-full min-h-screen px-4 py-8">
+        <!--1st part Home Page -->
+        <div class="flex h-1/2 place-items-center mb-4">
+          <div
+            class="flex flex-wrap flex-row w-full items-center text-center gap-4 md:gap-8 justify-center"
+          >
+            <div
+              class="w-2/5 md:basis-1/5 bg-stone-400 transition-all duration-400 hover:scale-110"
+            >
+              <img
+                class="w-full h-24 md:h-48"
+                src="./images/hompage-adhd.jpg"
+                width="280px"
+                height="160px"
+              />
+              <p class="text-white">ADHD</p>
+            </div>
+            <div
+              class="w-2/5 md:basis-1/5 bg-stone-400 transition-all duration-400 hover:scale-110"
+            >
+              <img
+                class="w-full h-24 md:h-48"
+                src="./images/homepage-couples.jpg"
+                width="280px"
+                height="160px"
+              />
+              <p class="text-white">Couples Therapy</p>
+            </div>
+            <div
+              class="w-2/5 md:basis-1/5 bg-stone-400 transition-all duration-400 hover:scale-110"
+            >
+              <img
+                class="w-full h-24 md:h-48"
+                src="./images/homepage-parental.jpg"
+                width="280px"
+                height="160px"
+              />
+              <p class="text-white">Parental Therapy</p>
+            </div>
+            <div
+              class="w-2/5 md:basis-1/5 bg-stone-400 transition-all duration-400 hover:scale-110"
+            >
+              <img
+                class="w-full h-24 md:h-48"
+                src="./images/homepage-selfcare.jpg"
+                width="280px"
+                height="160px"
+              />
+              <p class="text-white">Self Therapy</p>
+            </div>
+          </div>
+        </div>
+
+        <!--2nd part Home Page-->
+        <div class="flex flex-row h-1/2 mt-4 md:mx-auto justify-center">
+          <div>
+            <h3
+              class="text-center font-bold subpixel-antialiased font-mono mt-4 text-xl md:text-2xl text-stone-500 uppercase"
+            >
+              Therapy Isn't a Luxury; It's a Priority You Can Afford...
+            </h3>
+            <img
+              class="relative mx-auto my-6 border-2 border-green-400"
+              src="./images/SunRise.png"
+              height="250px"
+              width="250px"
+            />
+          </div>
+        </div>
+
+        <!--Book A Session Button-->
+        <div class="flex flex-col items-center place-content-center min-h-24">
+          <div
+            class="border-2 border-amber-200 rounded-md py-4 bg-gradient-to-br from-green-400 via-green-100 to-green-200"
+          >
+            <a href="./Views/BookingPage.html" class="uppercase p-8 text-center"
+              >Book A Session</a
+            >
+          </div>
+        </div>
+
+        <!-- Why SunRise-->
+        <div id="slider-container" class="border-4 border-green-400 min-h-48">
+          <h3 class="text-center">Why SunRise Slider?</h3>
+        </div>
+
+        <!-- Reviews-->
+        <div
+          id="slider-container"
+          class="border-4 border-green-400 md:mx-36 min-h-48 mt-8"
+        >
+          <h3 class="text-center">Reviews</h3>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="relative md:min-h-64 w-full font-medium">
+        <div class="absolute inset-x-0 bottom-0 top-0 min-h-24 w-full">
+          <div
+            class="flex flex-row flex-wrap justify-center gap-8 md:gap-16 px-12 bg-green-400 py-6"
+          >
+            <div class="text-yellow-300">
+              <h6 class="text-xl font-bold text-stone-500 text-center">
+                SunRise
+              </h6>
+              <ul>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+              </ul>
+              <br />
+
+              <h6 class="text-xl font-bold text-stone-500 text-center">
+                Company
+              </h6>
+              <ul>
+                <li>Careers</li>
+                <li>About SunRise</li>
+                <li>Team</li>
+              </ul>
+            </div>
+
+            <div class="text-yellow-300">
+              <h6 class="text-xl font-bold text-stone-500 text-center">
+                Stay Connected
+              </h6>
+              <div class="grid grid-cols-2 justify-items-center">
+                <img
+                  class="m-2"
+                  src="./images/instagram.png"
+                  height="30px"
+                  width="30px"
+                />
+                <img
+                  class="m-2"
+                  src="./images/facebook.png"
+                  height="30px"
+                  width="30px"
+                />
+                <img
+                  class="m-2"
+                  src="./images/whatsapp.png"
+                  height="30px"
+                  width="30px"
+                />
+                <img
+                  class="m-2"
+                  src="./images/linkedin.png"
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+
+              <div class="mt-4">
+                <h6 class="text-xl font-bold text-stone-500 text-center">
+                  Customer Support
+                </h6>
+                <a>custlove@sunrisetherapy.com</a>
+              </div>
+            </div>
+
+            <div class="text-yellow-300">
+              <h6 class="text-xl font-bold text-stone-500 text-center">
+                Contact Us
+              </h6>
+              <a>ryderbros@sunrisetherapy.com</a> <br />
+              <a>1-800-000-0000</a>
+
+              <div>
+                <img
+                  class="relative mx-auto my-6 border-2 border-green-400"
+                  src="./images/SunRise.png"
+                  height="100px"
+                  width="100px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script type="text/javascript" src="./Script/header.js"></script>

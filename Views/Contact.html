@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header
+      class="flex shadow-md bg-amber-200 md:tracking-wide md:min-h-[70px] md:z-50"
+    >
+      <!--SunRise Name-->
+      <div
+        class="basis-1/2 md:basis-1/4 flex flex-nowrap items-center md:justify-between w-full"
+      >
+        <div class="basis-1/2 md:basis-1/4 md:self-center">
+          <a href="Index.html">
+            <h3
+              class="font-bold text-green-400 antialiased text-center text-2xl md:text-7xl"
+            >
+              SunRise
+            </h3>
+          </a>
+        </div>
+      </div>
+
+      <!--Below 768px Open Main Menu-->
+      <div
+        id="openmenu"
+        class="basis-1/2 flex justify-end items-center mr-6 md:hidden z-10"
+      >
+        <button>
+          <svg
+            class="w-6 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!--Below 768px Side Nav Bar-->
+      <div class="md:hidden" role="dialog" aria-modal="true">
+        <!-- <div class="fixed inset-0 z-10"></div> -->
+        <div
+          id="sidemenu"
+          class="fixed inset-y-0 right-0 z-50 transition-all duration-500 overflow-y-auto bg-amber-200 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          style="width: 0"
+        >
+          <div id="closemenu" class="flex items-center justify-end">
+            <button type="button" class="-m-1.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="Index.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >Home</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >About</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >Contact</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 text-center border-b-4 border-green-400"
+                  >Team</a
+                >
+              </div>
+              <div class="py-6 text-center">
+                <a
+                  href="Login.html"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 font-semibold leading-7 text-gray-900 hover:bg-gray-50 bg-gradient-to-br from-green-400 via-green-100 to-green-200"
+                  >Log in</a
+                >
+              </div>
+
+              <div class="py-6 text-center">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 bg-gradient-to-br from-green-400 via-green-100 to-green-200"
+                  >Book A Session</a
+                >
+              </div>
+
+              <img
+                class="relative mx-auto my-6"
+                src="../images/SunRise.png"
+                height="180px"
+                width="180px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--Above 768px Header Menu -->
+        <div
+          class="hidden md:flex basis-2/4 flex-wrap justify-center items-center gap-5 cursor-pointer text-green-400 font-medium text-xl"
+        >
+          <a class="hover:underline hover:font-bold" href="Index.html">Home</a>
+          <a class="hover:underline hover:font-bold" href="#">About</a>
+          <a class="hover:underline hover:font-bold" href="#">Contact</a>
+          <a class="hover:underline hover:font-bold" href="#">Team</a>
+        </div>
+
+        <!--Above 768pxLogin Button in Header Menu-->
+        <div
+          class="md:basis-1/4 cursor-pointer text-green-400 md:font-medium md:text-xl hidden md:flex md:justify-center items-center md:hover:font-extrabold"
+        >
+          <a href="/Views/Login.html">Login</a>
+          <svg
+            class="h-8 w-8 text-green-400"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" />
+            <path
+              d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+            />
+            <path d="M20 12h-13l3 -3m0 6l-3 -3" />
+          </svg>
+        </div>
+      </div>
+
+      <!--Above 768px Header Menu -->
+      <div
+        class="hidden md:flex basis-2/4 flex-wrap justify-center items-center md:gap-5 cursor-pointer text-green-400 font-medium text-xl"
+      >
+        <a class="hover:underline hover:font-bold" href="Index.html">Home</a>
+        <a class="hover:underline hover:font-bold" href="#">About</a>
+        <a class="hover:underline hover:font-bold" href="#">Contact</a>
+        <a class="hover:underline hover:font-bold" href="#">Team</a>
+      </div>
+
+      <!--Above 768pxLogin Button in Header Menu-->
+
+      <div
+        class="md:basis-1/4 cursor-pointer text-green-400 md:font-medium md:text-xl hidden md:flex md:justify-center items-center md:hover:font-extrabold"
+      >
+        <a class="z-50" href="Login.html">Login</a>
+        <svg
+          class="h-8 w-8 text-green-400"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <path
+            d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+          />
+          <path d="M20 12h-13l3 -3m0 6l-3 -3" />
+        </svg>
+      </div>
+    </header>
+    <div class="bg-green-400 w-full h-4">&nbsp;</div>
+    <div id="page-body" class="bg-amber-100 min-h-screen">
+      <h1>Contact Us Page</h1>
+    </div>
+  </body>
+</html>
+<script type="text/javascript" src="../Script/header.js"></script>
